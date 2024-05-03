@@ -1,9 +1,11 @@
 from getpass import getpass
 
+print('A good password should be at least 8 characters long, include an number, and include a special character. To see if your password meets those requirements and is "Secure" enter it below.')
+
 password = getpass('Password: ')
 spec = "!@#$%^&*()_+=-[]{}`/?~;:'/\""
 
-length = len(password)
+passlength = len(password)
 
 def check(input):
     number = False
@@ -18,8 +20,8 @@ def check(input):
         if letter in spec:
             special = True
 
-        if length < 8:
-            length = False
+        if passlength > 8:
+            length = True
 
         if special and number and length == True:
             return True
@@ -32,8 +34,8 @@ def check(input):
     elif number == True and special == True and length == False:
         print("You might want to make the password longer")
     elif number == False and special == True and length == True:
-        
         print("You might want to add a number. ")
+
     elif number == False and special == False and length == True:
         print("You might want to add a number and a special character.")
     elif number == False and special == True and length == True:
@@ -44,4 +46,4 @@ if check(password) == True:
 else:
     print("Your password is not secure")
 
-print(password)
+# print(password)
