@@ -1,6 +1,6 @@
 from getpass import getpass
 
-print('A good password should be at least 8 characters long, include an number, and include a special character. To see if your password meets those requirements and is "Secure" enter it below.')
+print('A good password should be at least 8 characters long, include an number, and include a special character. To see if your password meets those requirements and is "Secure", enter it below.')
 
 password = getpass('Password: ')
 spec = "!@#$%^&*()_+=-[]{}`/?~;:'/\""
